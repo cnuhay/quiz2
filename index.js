@@ -37,8 +37,7 @@ app.post('/', async (req, res) => {
     await user.save();
     res.status(201).send(`<h1>Document  Added</h1>`);
   }catch{
-    console.log(err);
-    res.status(400).send(err)
+    res.status(400).send(`<h1>Document  NOT Added</h1>`)
   }
   // send a response to the user
   res.send(`<h1>Document  Added</h1>`);
