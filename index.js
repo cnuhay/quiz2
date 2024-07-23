@@ -31,6 +31,7 @@ app.post('/', async (req, res) => {
     useUnifiedTopology:true,
   }).then(() => console.log('MongoDB open'))
   .catch((err) => console.log(err));
+  console.log(myuri);
   // add the data to the database
   try{
     const user = new User(userData);
