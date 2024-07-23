@@ -34,10 +34,10 @@ app.post('/', async (req, res) => {
   // add the data to the database
   try{
     const user = new User(userData);
-    console.log(user);
     await user.save();
     res.status(201).send(`<h1>Document  Added</h1>`);
   }catch{
+    console.log(err);
     res.status(400).send(err)
   }
   // send a response to the user
